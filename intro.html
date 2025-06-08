@@ -1,110 +1,1192 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Rahul Goyal - AI Product Manager</title>
-  </head>
-  <body style="margin:0; padding:0; background-color:#050A18; color:#00FF9D;">
-    <div style="width:100%; background-color:#050A18; padding:0; margin:0;">
-      <div style="max-width:600px; margin:0 auto; padding:20px; background-color:#050A18; color:#00FF9D; font-family:'Courier New', monospace; line-height:1.6;">
-
-        <!-- Header -->
-        <div style="text-align:center;">
-          <h1 style="margin:0;">RAHUL GOYAL</h1>
-          <p style="margin:0;">AI PRODUCT MANAGER</p>
-          <p style="margin:0;">SUNNYVALE, CA</p>
-          <div style="text-align:center;background:#0A1128;padding:5px 10px;border:1px solid #00FF9D;border-radius:5px;width:fit-content;margin:10px auto;display:block;font-size:12px;">
-            SEEKING NEW OPPORTUNITIES
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Goyal - AI Product Manager</title>
+  <style type="text/css">
+    /* Base styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+      color: #00FF9D;
+      background-color: #050A18;
+      overflow-x: hidden;
+    }
+    
+    /* Email container */
+    .email-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #050A18;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      box-shadow: 0 0 50px rgba(0, 255, 157, 0.2);
+    }
+    
+    /* AI Interface Elements */
+    .ai-interface {
+      position: relative;
+    }
+    
+    .terminal-header {
+      background: #0A1128;
+      padding: 15px;
+      border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .terminal-buttons {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .terminal-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .terminal-button.red {
+      background: #FF5F56;
+    }
+    
+    .terminal-button.yellow {
+      background: #FFBD2E;
+    }
+    
+    .terminal-button.green {
+      background: #27C93F;
+    }
+    
+    .terminal-title {
+      font-size: 14px;
+      color: rgba(0, 255, 157, 0.7);
+    }
+    
+    .terminal-body {
+      padding: 20px;
+      position: relative;
+    }
+    
+    /* Scanning effect */
+    .scan-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(0, 255, 157, 0.5);
+      box-shadow: 0 0 15px 3px rgba(0, 255, 157, 0.5);
+      animation: scanning 3s linear infinite;
+      z-index: 10;
+      pointer-events: none;
+    }
+    
+    @keyframes scanning {
+      0% { top: 0; }
+      100% { top: 100%; }
+    }
+    
+    /* Grid background */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+    }
+    
+    /* Holographic header */
+    .holographic-header {
+      position: relative;
+      padding: 60px 20px;
+      text-align: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .hologram-container {
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+    }
+    
+    .hologram-base {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 20px;
+      background: radial-gradient(ellipse at center, rgba(0, 255, 157, 0.5) 0%, rgba(0, 255, 157, 0) 70%);
+      border-radius: 50%;
+      filter: blur(5px);
+      animation: pulse-base 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-base {
+      0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+      50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+    }
+    
+    .hologram-projection {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 250px;
+      background: linear-gradient(to top, rgba(0, 255, 157, 0.7), rgba(0, 255, 157, 0));
+      animation: flicker 0.5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes flicker {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.5; }
+    }
+    
+    .hologram-content {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: float 5s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-15px); }
+    }
+    
+    .hologram-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(0, 255, 157, 0.3);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+    
+    .hologram-ring:nth-child(2) {
+      width: 220px;
+      height: 220px;
+      border-width: 1px;
+      animation-duration: 15s;
+      animation-direction: reverse;
+    }
+    
+    .hologram-ring:nth-child(3) {
+      width: 180px;
+      height: 180px;
+      border-width: 1px;
+      animation-duration: 25s;
+    }
+    
+    @keyframes rotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    
+    .hologram-name {
+      font-size: 32px;
+      font-weight: 700;
+      color: #00FF9D;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+      letter-spacing: 2px;
+      animation: glitch 5s infinite;
+    }
+    
+    @keyframes glitch {
+      0%, 100% { text-shadow: 0 0 10px rgba(0, 255, 157, 0.7); }
+      25% { text-shadow: -2px 0 10px rgba(0, 255, 157, 0.7), 2px 0 8px rgba(255, 0, 255, 0.5); }
+      26%, 74% { text-shadow: 0 0 10px rgba(0, 255, 157, 0.7); }
+      75% { text-shadow: 2px 0 10px rgba(0, 255, 157, 0.7), -2px 0 8px rgba(0, 255, 255, 0.5); }
+    }
+    
+    .hologram-title {
+      font-size: 14px;
+      color: rgba(0, 255, 157, 0.8);
+      margin: 10px 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    
+    .hologram-location {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(0, 255, 157, 0.7);
+      margin-top: 5px;
+    }
+    
+    .location-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #00FF9D;
+      border-radius: 50%;
+      margin-right: 5px;
+      animation: blink 2s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    
+    .hologram-status {
+      margin-top: 15px;
+      font-size: 12px;
+      padding: 5px 15px;
+      background: rgba(0, 255, 157, 0.1);
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 20px;
+      animation: pulse-status 2s infinite;
+    }
+    
+    @keyframes pulse-status {
+      0%, 100% { background: rgba(0, 255, 157, 0.1); }
+      50% { background: rgba(0, 255, 157, 0.2); }
+    }
+    
+    /* Video section - Enhanced for reel aspect ratio */
+    .video-section {
+      position: relative;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+    
+    .video-container {
+      position: relative;
+      max-width: 350px; /* Reduced width for reel format */
+      margin: 0 auto;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+    }
+    
+    .video-header {
+      background: rgba(0, 255, 157, 0.1);
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+    }
+    
+    .video-title {
+      font-size: 14px;
+      color: #00FF9D;
+    }
+    
+    .video-controls {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .video-control {
+      width: 10px;
+      height: 10px;
+      background: rgba(0, 255, 157, 0.3);
+      border-radius: 50%;
+    }
+    
+    /* Reel aspect ratio container */
+    .video-placeholder {
+      background-color: #0A1128;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9/16; /* Reel aspect ratio */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* YouTube iframe for reel format */
+    .video-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 3;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 2;
+      animation: scan-lines 10s linear infinite;
+    }
+    
+    @keyframes scan-lines {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 100px; }
+    }
+    
+    .video-play {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      border: 2px solid rgba(0, 255, 157, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 3;
+    }
+    
+    .video-play::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 25px;
+      border-color: transparent transparent transparent #00FF9D;
+      margin-left: 5px;
+    }
+    
+    .video-play::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 50%;
+      animation: pulse-play 2s infinite;
+    }
+    
+    @keyframes pulse-play {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.2; }
+    }
+    
+    .video-caption {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(0, 255, 157, 0.7);
+    }
+    
+    /* AI Assistant Interface */
+    .ai-assistant {
+      position: relative;
+      padding: 30px 20px;
+      z-index: 1;
+    }
+    
+    .ai-conversation {
+      max-width: 550px;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .ai-header {
+      background: rgba(0, 255, 157, 0.1);
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+    }
+    
+    .ai-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00FF9D, #00B8FF);
+      margin-right: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ai-avatar::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom right,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.5) 50%,
+        transparent 60%,
+        transparent 100%
+      );
+      animation: shine 3s infinite;
+    }
+    
+    .ai-name {
+      font-size: 14px;
+      color: #00FF9D;
+    }
+    
+    .ai-status {
+      width: 8px;
+      height: 8px;
+      background-color: #00FF9D;
+      border-radius: 50%;
+      margin-left: 10px;
+      animation: blink 1.5s infinite;
+    }
+    
+    .ai-messages {
+      padding: 15px;
+      background: #0A1128;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .message {
+      margin-bottom: 15px;
+      animation: fade-in 0.5s;
+    }
+    
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-time {
+      font-size: 10px;
+      color: rgba(0, 255, 157, 0.5);
+      margin-bottom: 3px;
+    }
+    
+    .message-content {
+      padding: 10px 15px;
+      border-radius: 5px;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+    
+    .message.ai .message-content {
+      background: rgba(0, 255, 157, 0.1);
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      color: #00FF9D;
+      margin-right: auto;
+    }
+    
+    .message.user .message-content {
+      background: rgba(0, 184, 255, 0.1);
+      border: 1px solid rgba(0, 184, 255, 0.3);
+      color: #00B8FF;
+      margin-left: auto;
+    }
+    
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+    
+    .typing-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(0, 255, 157, 0.7);
+      border-radius: 50%;
+      margin-right: 4px;
+      animation: typing 1.5s infinite;
+    }
+    
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes typing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    /* Experience Timeline */
+    .experience-timeline {
+      position: relative;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+    
+    .timeline-container {
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      color: #00FF9D;
+      margin-bottom: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-title::before,
+    .section-title::after {
+      content: "//";
+      color: rgba(0, 255, 157, 0.5);
+      margin: 0 10px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      border-left: 2px solid rgba(0, 255, 157, 0.3);
+      animation: fade-in 0.5s;
+    }
+    
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 14px;
+      height: 14px;
+      background: #00FF9D;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+    }
+    
+    .timeline-date {
+      font-size: 12px;
+      color: rgba(0, 255, 157, 0.7);
+      margin-bottom: 5px;
+    }
+    
+    .timeline-role {
+      font-size: 16px;
+      color: #00FF9D;
+      margin: 0 0 5px;
+      font-weight: 700;
+    }
+    
+    .timeline-company {
+      font-size: 14px;
+      color: rgba(0, 255, 157, 0.9);
+      margin: 0 0 10px;
+    }
+    
+    .timeline-description {
+      font-size: 14px;
+      color: rgba(0, 255, 157, 0.7);
+      line-height: 1.5;
+    }
+    
+    .timeline-highlight {
+      color: #00B8FF;
+      font-weight: 700;
+    }
+    
+    /* Skills Matrix */
+    .skills-matrix {
+      position: relative;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+    
+    .matrix-container {
+      max-width: 550px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    
+    .skill-card {
+      background: rgba(0, 255, 157, 0.05);
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 5px;
+      padding: 15px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #00FF9D, #00B8FF);
+    }
+    
+    .skill-name {
+      font-size: 14px;
+      color: #00FF9D;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    
+    .skill-level {
+      height: 5px;
+      background: rgba(0, 255, 157, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(90deg, #00FF9D, #00B8FF);
+      border-radius: 3px;
+      width: 0;
+      animation: progress 1.5s ease-out forwards;
+    }
+    
+    @keyframes progress {
+      from { width: 0; }
+      to { width: var(--progress); }
+    }
+    
+    .skill-percentage {
+      font-size: 12px;
+      color: rgba(0, 255, 157, 0.7);
+      text-align: right;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+    
+    .cta-container {
+      max-width: 550px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .cta-message {
+      font-size: 16px;
+      color: #00FF9D;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .command-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .command-button {
+      position: relative;
+      display: inline-block;
+      padding: 12px 25px;
+      background: rgba(0, 255, 157, 0.1);
+      color: #00FF9D;
+      text-decoration: none;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    
+    .command-button:hover {
+      background: rgba(0, 255, 157, 0.2);
+      box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+    }
+    
+    .command-button::before {
+      content: ">";
+      margin-right: 8px;
+      color: rgba(0, 255, 157, 0.7);
+    }
+    
+    .command-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 255, 157, 0.1) 50%,
+        transparent 100%
+      );
+      transform: translateX(-100%);
+      animation: button-shine 3s infinite;
+    }
+    
+    @keyframes button-shine {
+      100% { transform: translateX(100%); }
+    }
+    
+    .terminal-input {
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      background: rgba(0, 255, 157, 0.05);
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      border-radius: 5px;
+      text-align: left;
+    }
+    
+    .input-prompt {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+    
+    .prompt-symbol {
+      color: #00FF9D;
+      margin-right: 8px;
+    }
+    
+    .input-text {
+      color: rgba(0, 255, 157, 0.9);
+    }
+    
+    .blinking-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background: #00FF9D;
+      margin-left: 5px;
+      animation: blink-cursor 1s infinite;
+    }
+    
+    @keyframes blink-cursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    /* Footer */
+    .footer {
+      position: relative;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(0, 255, 157, 0.3);
+      z-index: 1;
+    }
+    
+    .footer-text {
+      font-size: 12px;
+      color: rgba(0, 255, 157, 0.7);
+    }
+    
+    .footer-signature {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #00FF9D;
+    }
+    
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      .hologram-name {
+        font-size: 24px;
+      }
+      
+      .matrix-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .command-buttons {
+        flex-direction: column;
+      }
+      
+      .command-button {
+        width: 100%;
+      }
+      
+      .video-container {
+        max-width: 280px; /* Smaller on mobile */
+      }
+    }
+    
+    /* Fallback styles for email clients with limited CSS support */
+    .fallback-header {
+      background-color: #0A1128;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00FF9D;
+    }
+    
+    .fallback-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00FF9D;
+      margin: 0;
+    }
+    
+    .fallback-title {
+      font-size: 16px;
+      color: #00FF9D;
+      margin: 10px 0;
+    }
+    
+    .fallback-content {
+      padding: 20px;
+      background-color: #0A1128;
+      color: #00FF9D;
+    }
+    
+    .fallback-section {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+    }
+    
+    .fallback-heading {
+      font-size: 18px;
+      color: #00FF9D;
+      margin: 0 0 15px;
+    }
+    
+    .fallback-cta {
+      display: block;
+      background-color: #0A1128;
+      color: #00FF9D;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 10px 0;
+      border: 1px solid #00FF9D;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Terminal Header -->
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <div class="terminal-button red"></div>
+        <div class="terminal-button yellow"></div>
+        <div class="terminal-button green"></div>
+      </div>
+      <div class="terminal-title">ai-product-manager.exe</div>
+      <div></div>
+    </div>
+    
+    <!-- Scanning effect -->
+    <div class="scan-line"></div>
+    
+    <!-- Grid background -->
+    <div class="grid-bg"></div>
+    
+    <!-- Holographic Header -->
+    <div class="holographic-header">
+      <div class="hologram-container">
+        <div class="hologram-base"></div>
+        <div class="hologram-projection"></div>
+        <div class="hologram-ring"></div>
+        <div class="hologram-ring"></div>
+        <div class="hologram-ring"></div>
+        <div class="hologram-content">
+          <h1 class="hologram-name">RAHUL GOYAL</h1>
+          <p class="hologram-title">AI PRODUCT MANAGER</p>
+          <div class="hologram-location">
+            <span class="location-dot"></span>
+            <span>SUNNYVALE, CA</span>
           </div>
+          <div class="hologram-status">SEEKING NEW OPPORTUNITIES</div>
         </div>
-
-        <!-- Video -->
-        <div style="margin-top:40px;">
-          <a href="https://youtube.com/shorts/oKjXyJqvO4A" target="_blank">
-            <img src="https://img.youtube.com/vi/oKjXyJqvO4A/maxresdefault.jpg" alt="AI Product Vision Short Thumbnail" style="width:100%; border:1px solid #00FF9D;">
-          </a>
-          <p style="text-align:center; font-size:12px;">// CLICK ON THE VIDEO TO KNOW MORE ABOUT ME</p>
-        </div>
-
-        <!-- AI Assistant -->
-        <div style="margin-top:40px;">
-          <h3 style="color:#00FF9D; font-size:16px; border-bottom:1px solid #00FF9D;">AI Assistant Terminal</h3>
-          <div style="background:#0A1128;padding:15px;border:1px solid #00FF9D;font-size:13px;border-radius:5px;">
-            <p style="background:#001F17;padding:10px;border-radius:10px;"><strong>🤖 [09:42:18]</strong> Initializing candidate profile analysis...</p>
-            <p style="background:#001F17;padding:10px;border-radius:10px;"><strong>🤖 [09:42:21]</strong> Profile loaded: Rahul Goyal, AI Product Manager at HPE, Sunnyvale, CA.</p>
-            <p style="background:#002B40;padding:10px;border-radius:10px;"><strong>👤 [09:42:35]</strong> Tell me about Rahul's AI product experience.</p>
-            <p style="background:#001F17;padding:10px;border-radius:10px;"><strong>🤖 [09:42:40]</strong> Rahul has built enterprise AI solutions that drive measurable business impact. At HPE, he developed Agentic AI workflows for hybrid cloud that impacted more than 34,000 enterprise customers and managed 5+ Million infrastructure devices. He also launched Gen AI Studio, reducing deployment time by 50%.</p>
-            <p style="background:#002B40;padding:10px;border-radius:10px;"><strong>👤 [09:43:12]</strong> What makes him the ideal candidate for an AI Product Manager role?</p>
-            <p style="background:#001F17;padding:10px;border-radius:10px;"><strong>🤖 [09:43:18]</strong> Rahul combines technical AI knowledge with product expertise and business acumen. He has a proven track record of translating complex AI technologies into intuitive products that solve real business problems. His experience spans the entire product lifecycle, from ideation to deployment and iteration, with a focus on user-centered design and data-driven decision making.</p>
-          </div>
-        </div>
-
-        <!-- Experience -->
-        <div style="margin-top:40px;">
-          <h3 style="color:#00FF9D; border-bottom:1px solid #00FF9D;">Experience</h3>
-          <table cellpadding="10" cellspacing="0" border="0" style="width:100%; font-size:14px;">
-            <tr>
-              <td><strong>2024 - Present</strong></td>
-              <td>
-                <strong>AI & Data Product Manager</strong><br>
-                Hewlett Packard Enterprise<br>
-                Built Agentic AI workflows for HPE's hybrid cloud platform, impacting 34,000+ customers and reducing onboarding time by 30%.<br>
-                Built the Data Platform and AI-driven analytics layer to provide analytics-as-a-service across 5M+ devices.
-              </td>
-            </tr>
-            <tr>
-              <td><strong>2023 Summer</strong></td>
-              <td>
-                <strong>Product Management Intern</strong><br>
-                Hewlett Packard Enterprise<br>
-                Drove $400M in annual renewals by building end-to-end asset visibility features.
-              </td>
-            </tr>
-            <tr>
-              <td><strong>2021 - 2022</strong></td>
-              <td>
-                <strong>Solutions Architect</strong><br>
-                Dell Technologies<br>
-                Delivered pre-sales architecture for a $180M storage portfolio, solving enterprise-scale customer needs.
-              </td>
-            </tr>
-            <tr>
-              <td><strong>2019 - 2020</strong></td>
-              <td>
-                <strong>Co-Founder</strong><br>
-                SNU-on-Wheels<br>
-                Co-founded a bike-sharing startup solving mobility for 8,000+ students, incubated under NITI Aayog.
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- Skills -->
-        <div style="margin-top:40px;">
-          <h3 style="color:#00FF9D; border-bottom:1px solid #00FF9D;">Skills Matrix</h3>
-          <table cellpadding="10" cellspacing="0" border="0" style="width:100%; font-size:14px;">
-            <tr><td>AI Product Strategy</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:95%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">95%</div></td></tr>
-            <tr><td>LLM Applications</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:90%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">90%</div></td></tr>
-            <tr><td>Data Analytics</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:85%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">85%</div></td></tr>
-            <tr><td>User Research</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:90%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">90%</div></td></tr>
-            <tr><td>Technical Communication</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:95%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">95%</div></td></tr>
-            <tr><td>Product Roadmapping</td><td><div style="background:#003F2F; height:12px; border-radius:4px;"><div style="width:90%; background:#00FF9D; height:12px;"></div></div><div style="font-size:12px;">90%</div></td></tr>
-          </table>
-        </div>
-
-        <!-- Buttons -->
-        <div style="text-align:center; margin-top:40px;">
-          <a href="https://drive.google.com/file/d/11r9GrysQJ2vfos4i3BX5bW_rJQF6bEI5/view?usp=sharing" target="_blank" style="background:#00FF9D; color:#050A18; padding:10px 20px; text-decoration:none; border-radius:4px; margin:5px; display:inline-block;">download_resume.pdf</a>
-          <a href="https://www.linkedin.com/in/rahul-goyal25/" target="_blank" style="background:#00FF9D; color:#050A18; padding:10px 20px; text-decoration:none; border-radius:4px; margin:5px; display:inline-block;">view_linkedin_profile</a>
-          <a href="https://www.grahul.com/" target="_blank" style="background:#00FF9D; color:#050A18; padding:10px 20px; text-decoration:none; border-radius:4px; margin:5px; display:inline-block;">visit_my_website</a>
-        </div>
-
-        <!-- Footer -->
-        <p style="margin-top:30px; font-size:12px; text-align:center;">
-          This message was generated using AI-enhanced communication protocols.<br>
-          // RAHUL GOYAL | AI PRODUCT MANAGER
-        </p>
       </div>
     </div>
-  </body>
+    
+    <!-- YouTube Shorts Video Section -->
+    <div class="video-section">
+      <div class="video-container">
+        <div class="video-header">
+          <div class="video-title">who_am_I.mp4</div>
+          <div class="video-controls">
+            <div class="video-control"></div>
+            <div class="video-control"></div>
+            <div class="video-control"></div>
+          </div>
+        </div>
+        
+        <!-- YouTube Shorts Thumbnail with Link -->
+        <a href="https://youtube.com/shorts/oKjXyJqvO4A" class="shorts-thumbnail" target="_blank">
+          
+          <!-- REPLACE WITH YOUR SHORTS THUMBNAIL IMAGE -->
+          <img src="https://img.youtube.com/vi/oKjXyJqvO4A/maxresdefault.jpg" alt="AI Product Vision Short Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          
+       
+          
+          <div class="video-overlay"></div>
+          <div class="shorts-play-overlay"></div>
+        </a>
+      </div>
+      <p class="video-caption">// CLICK ON THE VIDEO TO KNOW MORE ABOUT ME</p>
+    </div>
+    
+    <!-- AI Assistant Interface -->
+    <div class="ai-assistant">
+      <div class="ai-conversation">
+        <div class="ai-header">
+          <div class="ai-avatar"></div>
+          <div class="ai-name">AI ASSISTANT</div>
+          <div class="ai-status"></div>
+        </div>
+        <div class="ai-messages">
+          <div class="message ai">
+            <div class="message-time">09:42:18</div>
+            <div class="message-content">
+              Initializing candidate profile analysis...
+            </div>
+          </div>
+          
+          <div class="message ai">
+            <div class="message-time">09:42:21</div>
+            <div class="message-content">
+              Profile loaded: Rahul Goyal, AI Product Manager at HPE, Sunnyvale, CA.
+            </div>
+          </div>
+          
+          <div class="message user">
+            <div class="message-time">09:42:35</div>
+            <div class="message-content">
+              Tell me about Rahul's AI product experience.
+            </div>
+          </div>
+          
+          <div class="message ai">
+            <div class="message-time">09:42:40</div>
+            <div class="message-content">
+              Rahul has built enterprise AI solutions that drive measurable business impact. At HPE, he developed Agentic AI workflows for hybrid cloud that impacted more than 34,000 enterprise customers and managed 5+ Million  infrastructure devices for large enterprise customers. He also launched Gen AI Studio, making AI application building seamless for enterprises and reducing deployment time by 50% with custom built infrastructural and application layer deployment .
+            </div>
+          </div>
+          
+          <div class="message user">
+            <div class="message-time">09:43:12</div>
+            <div class="message-content">
+              What makes him the ideal candidate for an AI Product Manager role?
+            </div>
+          </div>
+          
+          <div class="message ai">
+            <div class="message-time">09:43:18</div>
+            <div class="message-content">
+              Rahul combines technical AI knowledge with product expertise and business acumen. He has a proven track record of translating complex AI technologies into intuitive products that solve real business problems. His experience spans the entire product lifecycle, from ideation to deployment and iteration, with a focus on user-centered design and data-driven decision making.
+            </div>
+          </div>
+          
+          <div class="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Enhanced Experience Timeline with Dell Technologies -->
+    <div class="experience-timeline">
+      <div class="timeline-container">
+        <div class="section-title">EXPERIENCE</div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2024 - PRESENT</div>
+          <h3 class="timeline-role">AI AND DATA PRODUCT MANAGER</h3>
+          <div class="timeline-company">HEWLETT PACKARD ENTERPRISE</div>
+          <p class="timeline-description">
+            Built <span class="timeline-highlight">Agentic AI workflows</span> for HPE's hybrid cloud platform, impacting more than <span class="timeline-highlight">34,000 customers </span> by building multi-agentic workflows for enteprise customers, making the complete workflow proactive, detecting potential threats/anomalies and reducing onboarding and management time by <span class="timeline-highlight">30%</span>. 
+            
+<br>Built the <span class="timeline-highlight">Data Platform and AI-driven analytics layer</span>, to provide analytics as service to the end customers and the sales org on the platform, enriching the services offered and overall insights on the platform for more than <span class="timeline-highlight">5 Million devices</span>.</br>
+          </p>
+        </div>
+        
+       
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023 SUMMER</div>
+          <h3 class="timeline-role">PRODUCT MANAGEMENT INTERN</h3>
+          <div class="timeline-company">HEWLETT PACKARD ENTERPRISE</div>
+          <p class="timeline-description">
+            Built asset management capability, driving <span class="timeline-highlight">$400M</span> in annual renewals by leveraging end to end asset lifecycle visibility.
+          </p>
+        </div>
+        
+         <!-- New Dell Technologies Experience Section -->
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2022</div>
+          <h3 class="timeline-role">SOLUTIONS ARCHITECT</h3>
+          <div class="timeline-company">DELL TECHNOLOGIES</div>
+          <p class="timeline-description">
+            Worked as the Pre-Sales Analyst for the enterprise storage business unit, driving technical architectural solutions to meet the customer business needs for <span class="timeline-highlight">$180M</span> customer revenue portfolio.
+          </p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2019 - 2020</div>
+          <h3 class="timeline-role">CO-FOUNDER</h3>
+          <div class="timeline-company">SNU-ON-WHEELS</div>
+          <p class="timeline-description">
+            Co-founded a bike rental startup during undergrad, solving campus mobility issues for <span class="timeline-highlight">8,000+</span> students. Incubated under NITI Aayog, Govt. of India. Built and scaled operations from concept to market fit.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Skills Matrix -->
+    <div class="skills-matrix">
+      <div class="section-title">SKILLS MATRIX</div>
+      
+      <div class="matrix-container">
+        <div class="skill-card">
+          <h3 class="skill-name">AI Product Strategy</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 95%"></div>
+          </div>
+          <div class="skill-percentage">95%</div>
+        </div>
+        
+        <div class="skill-card">
+          <h3 class="skill-name">LLM Applications</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 90%"></div>
+          </div>
+          <div class="skill-percentage">90%</div>
+        </div>
+        
+        <div class="skill-card">
+          <h3 class="skill-name">Data Analytics</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 85%"></div>
+          </div>
+          <div class="skill-percentage">85%</div>
+        </div>
+        
+        <div class="skill-card">
+          <h3 class="skill-name">User Research</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 90%"></div>
+          </div>
+          <div class="skill-percentage">90%</div>
+        </div>
+        
+        <div class="skill-card">
+          <h3 class="skill-name">Technical Communication</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 95%"></div>
+          </div>
+          <div class="skill-percentage">95%</div>
+        </div>
+        
+        <div class="skill-card">
+          <h3 class="skill-name">Product Roadmapping</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="--progress: 90%"></div>
+          </div>
+          <div class="skill-percentage">90%</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-container">
+        <p class="cta-message">
+          I'm passionate about building AI products that create real impact. Let's connect and discuss how I can contribute to your team's success.
+        </p>
+        
+        <div class="command-buttons">
+          <!-- REPLACE THESE LINKS WITH YOUR ACTUAL LINKS -->
+          <a href="https://drive.google.com/file/d/11r9GrysQJ2vfos4i3BX5bW_rJQF6bEI5/view?usp=sharing" class="command-button" target="_blank">download_resume.pdf</a>
+          <a href="https://www.linkedin.com/in/rahul-goyal25/" class="command-button" target="_blank">view_linkedin_profile</a>
+          <a href="https://www.grahul.com/" class="command-button" target="_blank">visit_my_website</a>
+        </div>
+        
+        <div class="terminal-input">
+          <div class="input-prompt">
+            <span class="prompt-symbol">$</span>
+            <span class="input-text">schedule_interview --candidate="Rahul Goyal" --role="AI Product Manager"</span>
+            <span class="blinking-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p class="footer-text">© 2025 | This message was generated using AI-enhanced communication protocols</p>
+      <p class="footer-signature">// RAHUL GOYAL | AI PRODUCT MANAGER | SUNNYVALE, CA</p>
+    </div>
+    
+    <!-- Fallback content for email clients with limited CSS support -->
+    <!--[if mso]>
+    <div class="fallback-header">
+      <h1 class="fallback-name">RAHUL GOYAL</h1>
+      <p class="fallback-title">AI PRODUCT MANAGER | SUNNYVALE, CA</p>
+    </div>
+    
+    <div class="fallback-content">
+      <div class="fallback-section">
+        <h2 class="fallback-heading">ABOUT ME</h2>
+        <p>I'm a Product Manager specializing in AI solutions, based in Sunnyvale, CA. I'm passionate about transforming complex AI technologies into intuitive, high-impact products that solve real business challenges.</p>
+      </div>
+      
+      <div class="fallback-section">
+        <h2 class="fallback-heading">EXPERIENCE</h2>
+        <p><strong>PRODUCT MANAGER at HPE (2022-PRESENT)</strong><br>
+        Built Agentic AI workflows for HPE's hybrid cloud platform, accelerating task execution by 30% and reducing operational costs by 25%.</p>
+      </div>
+      
+      <a href="#" class="fallback-cta">DOWNLOAD RESUME</a>
+      <a href="#" class="fallback-cta">VIEW LINKEDIN PROFILE</a>
+      
+      <p>I'm seeking new opportunities as an AI Product Manager. Let's connect!</p>
+    </div>
+    <![endif]-->
+  </div>
+</body>
 </html>
